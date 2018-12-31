@@ -8,7 +8,7 @@ export LANG=en_US.UTF-8
 
 # Alias
 source ~/$DOT_DIR/shell/alias_common.sh
-source ~/$DOT_DIR/shell/alias_ssh.sh
+source ~/$DOT_DIR/shell/alias_private.sh
 
 # pyenv
 export PYENV_ROOT=$HOME/.pyenv
