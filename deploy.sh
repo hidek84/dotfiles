@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
-DOT_DIR=.dotfiles
+DOT_DIR=$HOME/.dotfiles
 
 echo "Making symlink for dotfiles"
 cd $SCRIPT_DIR
