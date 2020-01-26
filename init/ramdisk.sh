@@ -18,11 +18,11 @@ create_symlink () {
   SRC=$1
   DST=$2
   echo "Removing... $SRC and $DST"
-  rm -rf $SRC
-  rm -rf $DST
+  rm -rf "$SRC"
+  rm -rf "$DST"
   echo "Creating symlink... $DST -> $SRC"
-  mkdir -p $DST
-  ln -nfs $DST $SRC
+  mkdir -p "$DST"
+  ln -nfs "$DST" "$SRC"
 }
 
 RAM_CACHE_DIR=/Volumes/${DISK_NAME}/Caches
@@ -30,4 +30,6 @@ LIB_CACHE_DIR=${HOME}/Library/Caches
 
 # Create symlink for Safari/Vivaldi/Chrome
 create_symlink ${LIB_CACHE_DIR}/com.apple.Safari ${RAM_CACHE_DIR}/Safari
-create_symlink ${LIB_CACHE_DIR}/Google/Chrome/Default/Cache ${RAM_CACHE_DIR}/Chrome
+create_symlink ${LIB_CACHE_DIR}/Google/Chrome/Default/Cache ${RAM_CACHE_DIR}/Chrome/Cache
+create_symlink ${LIB_CACHE_DIR}/Google/Chrome/Default/Code\ Cache ${RAM_CACHE_DIR}/Chrome/Code\ Cache
+create_symlink ${LIB_CACHE_DIR}/Google/Chrome/Default/Media\ Cache ${RAM_CACHE_DIR}/Chrome/Media\ Cache
