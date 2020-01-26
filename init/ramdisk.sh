@@ -2,7 +2,8 @@
 # https://www.tekrevue.com/tip/how-to-create-a-4gbs-ram-disk-in-mac-os-x/
 
 # Variables
-disksize=`expr 128 \* 2048`
+desired_mb="128"
+disksize=`expr $desired_mb \* 2048`
 DISK_NAME="RamDisk"
 
 # Create RamDisk
