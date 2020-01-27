@@ -25,7 +25,7 @@ sudo tee $PLIST_FILE <<EOF
         <key>ProgramArguments</key>
         <array>
             <string>/bin/sh</string>
-            <string>$HOME/.dotfiles/init/ramdisk.sh</string>
+            <string>$HOME/.dotfiles/tools/ramdisk.sh</string>
             <string>$desired_mb</string>
         </array>
         <key>RunAtLoad</key>
