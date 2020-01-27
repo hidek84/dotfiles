@@ -2,7 +2,7 @@ LABEL_NAME=com.hide.ramdisk
 PLIST_FILE=/Library/LaunchDaemons/$LABEL_NAME.plist
 
 # Input desired size in MB
-echo "Please input the desired size in MB for ramdisk."
+echo ">> Please input the desired size in MB for ramdisk."
 read desired_mb
 
 if ! [[ "$desired_mb" =~ ^[0-9]+$ ]]; then

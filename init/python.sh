@@ -2,7 +2,7 @@
 
 # http://qiita.com/Kodaira_/items/feadfef9add468e3a85b
 
-PYENV_PATH=~/.pyenv
+source .pathrc
 
 if [ -e $PYENV_PATH ]; then
 	echo "Already exist $PYENV_PATH."
@@ -16,7 +16,7 @@ else
     cd $PYENV_PATH
 	git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --tags --max-count=1)`
 
-    export PATH=$PYENV_ROOT/bin:$PATH
+    export PATH=$PYENV_PATH/bin:$PATH
     eval "$(pyenv init -)"
 
     echo "Installed!"

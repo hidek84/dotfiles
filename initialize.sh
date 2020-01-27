@@ -2,8 +2,8 @@
 
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
-cd $SCRIPT_DIR/init
-for file in ./*.sh
+cd $SCRIPT_DIR
+for file in $SCRIPT_DIR/init/*.sh
 do
     if [ -f "$file" ]; then
         echo "========== Running $file =========="

@@ -1,4 +1,4 @@
-BREW_PATH=~/.homebrew
+source .pathrc
 
 if [ -e $BREW_PATH ]; then
 	echo "Already exist $BREW_PATH."
