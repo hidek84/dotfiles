@@ -13,3 +13,6 @@ do
         continue
     fi
 done
+
+echo "Disabling hibernate"
+sudo pmset -a hibernatemode 0

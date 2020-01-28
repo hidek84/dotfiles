@@ -40,3 +40,24 @@ sudo launchctl load $PLIST_FILE
 
 echo "\nRegistered as a startup"
 sudo launchctl list | grep $LABEL_NAME
+
+# Create symbolic link for Safari
+create_symlink () {
+  SRC=$1
+  DST=$2
+  echo "Removing... $SRC and $DST"
+  sudo rm -rf "$SRC"
+  sudo rm -rf "$DST"
+  echo "Creating symlink... $DST -> $SRC"
+  sudo mkdir -p "$DST"
+  sudo ln -nfs "$DST" "$SRC"
+}
+
+echo "Creating symlink for Caches"
+DISK_NAME=RamDisk
+RAM_CACHE_DIR=/Volumes/${DISK_NAME}/caches
+LIB_CACHE_DIR=${HOME}/Library/Caches
+
+# Create symlink for Safari/Vivaldi/Chrome
+create_symlink /Library/Caches ${RAM_CACHE_DIR}/local_library/Caches
+create_symlink ~/Library/Caches ${RAM_CACHE_DIR}/user_library/Caches
