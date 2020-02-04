@@ -13,8 +13,8 @@ source $DOT_DIR/shell/alias_common.sh
 source $DOT_DIR/shell/alias_private.sh
 
 # Homebrew
-export PATH=$NVM_PATH/bin:$PATH
-export HOMEBREW_CACHE=$NVM_PATH/cache
+export PATH=$BREW_PATH/bin:$PATH
+export HOMEBREW_CACHE=$BREW_PATH/cache
 
 # pyenv
 export PATH=$PYENV_PATH/bin:$PATH
