@@ -43,14 +43,19 @@ sudo launchctl list | grep $LABEL_NAME
 
 # Create symbolic link for Safari
 create_symlink () {
-  SRC=$1
-  DST=$2
-  echo "Removing... $SRC and $DST"
-  sudo rm -rf "$SRC"
-  sudo rm -rf "$DST"
-  echo "Creating symlink... $DST -> $SRC"
-  sudo mkdir -p "$DST"
-  sudo ln -nfs "$DST" "$SRC"
+    SRC=$1
+    DST=$2
+    if [ -d "$SRC" ]; then
+        echo "Opening $SRC. Then, please delete "Caches" folder."
+        open $(cd $SRC; cd ..; pwd)
+        echo "Enter any key, then will create symlinks."
+        read dummy
+    fi
+    echo "Removing... $DST"
+    rm -rf "$DST"
+    echo "Creating symlink... $DST -> $SRC"
+    mkdir -p "$DST"
+    sudo ln -nfs "$DST" "$SRC"
 }
 
 echo "Creating symlink for Caches"
