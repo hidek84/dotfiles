@@ -6,11 +6,13 @@ export LANG=en_US.UTF-8
 export GIT_EDITOR=vim
 
 # Important paths
-source .pathrc
+source ~/.pathrc
 
 # Alias
 source $DOT_DIR/shell/alias_common.sh
-source $DOT_DIR/shell/alias_private.sh
+if [ -z "$DOT_DIR/shell/alias_private.sh" ]; then
+	source $DOT_DIR/shell/alias_private.sh
+fi
 
 # Homebrew
 export PATH=$BREW_PATH/bin:$PATH
@@ -19,7 +21,7 @@ export HOMEBREW_CACHE=$BREW_PATH/cache
 # pyenv
 export PATH=$PYENV_PATH/bin:$PATH
 if command -v pyenv 1>/dev/null 2>&1; then
- 	eval "$(pyenv init -)"
+	eval "$(pyenv init -)"
 fi
 
 # nvm
