@@ -8,11 +8,13 @@ export GIT_EDITOR=vim
 # Important paths
 source ~/.pathrc
 
-# Alias
-source $DOT_DIR/shell/alias_common.sh
-if [ -z "$DOT_DIR/shell/alias_private.sh" ]; then
-	source $DOT_DIR/shell/alias_private.sh
+# Load shells (alias, functions)
+for file in `ls $DOT_DIR/shell/*.sh`
+do
+if [ -z "$file" ]; then
+	source $file
 fi
+done
 
 # Homebrew
 export PATH=$BREW_PATH/bin:$PATH
