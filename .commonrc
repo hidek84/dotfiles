@@ -11,7 +11,8 @@ source ~/.pathrc
 # Load shells (alias, functions)
 for file in `ls $DOT_DIR/shell/*.sh`
 do
-if [ -z "$file" ]; then
+if [ -e "$file" ]; then
+	echo "Loading $file"
 	source $file
 fi
 done
