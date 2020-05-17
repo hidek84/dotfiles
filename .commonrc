@@ -29,3 +29,6 @@ fi
 
 # nvm
 source $NVM_PATH/nvm.sh
+
+# PATH
+export PATH="$PATH:$HOME/.local/bin"
