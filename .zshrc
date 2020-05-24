@@ -5,3 +5,6 @@ fi
 
 # Customize to your needs...
 source $HOME/.dotfiles/.commonrc
+
+# Load autosuggestions
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
