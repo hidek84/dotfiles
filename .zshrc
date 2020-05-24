@@ -6,5 +6,7 @@ fi
 # Customize to your needs...
 source $HOME/.dotfiles/.commonrc
 
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" 
+
 # Load autosuggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
