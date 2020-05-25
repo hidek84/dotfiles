@@ -7,32 +7,6 @@ bash deploy.sh
 bash initialize.sh
 ```
 
-## Prezto
-
-~/.zpreztorc
-```
-zstyle ':prezto:load' pmodule \
-  'git' \
-  'environment' \
-  'terminal' \
-  'editor' \
-  'history' \
-  'directory' \
-  'spectrum' \
-  'utility' \
-  'completion' \
-  'prompt' \
-  'syntax-highlighting' \
-  'autosuggestions'
-```
-
-~/.zshrc
-```
-# Customize to your needs...
-source $HOME/.dotfiles/.commonrc
-```
-
-
 ## References
 
 ### Zsh - Prezto
