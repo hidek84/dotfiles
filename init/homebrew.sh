@@ -9,8 +9,3 @@ else
 
     echo "Installed!"
 fi
-
-# https://github.com/pandas-dev/pandas/issues/27532#issuecomment-517259553
-echo ">> Installing xz for pandas" && {
-	brew install xz
-}
