@@ -12,6 +12,7 @@ do
     [ "$f" = ".gitignore" ] && continue
     [ "$f" = ".DS_Store" ] && continue
 
+    echo "Making a symlink for ${f}..."
     ln -snfv "$DOT_DIR/$f" "$HOME/$f"
 done
 
