@@ -65,4 +65,3 @@ LIB_CACHE_DIR=${HOME}/Library/Caches
 
 # Create symlink for Safari/Vivaldi/Chrome
 create_symlink /Library/Caches ${RAM_CACHE_DIR}/local_library/Caches
-create_symlink ~/Library/Caches ${RAM_CACHE_DIR}/user_library/Caches
