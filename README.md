@@ -7,6 +7,14 @@ bash deploy.sh
 bash initialize.sh
 ```
 
+## Manual updates
+* Sytem Preferences
+  * Keyboard
+    * Shortcuts
+      * Input Sources - disable all
+      * Keyboard - update `Move focus to next window`
+
+
 ## References
 
 ### Zsh - Prezto
