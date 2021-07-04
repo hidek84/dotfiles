@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 
 source ../.pathrc
 
@@ -18,12 +18,16 @@ echo ">>> Installing pyenv" && {
 	
 	    export PATH=$PYENV_PATH/bin:$PATH
 	    eval "$(pyenv init -)"
-	
-	    echo "Installed!"
+	    echo "pyenv installed!"
 	fi
 }
 
-# https://pipxproject.github.io/pipx/installation/
-echo ">>> Installing pipx" && {
-	python3 -m pip install --user pipx
+echo ">>> Installing python" || {
+	LATEST_VERSION=$(pyenv install --list | grep -v - | grep -v "a\|b" | tail -1)
+	pyenv install $LATEST_VERSION
+	pyenv global $LATEST_VERSION
+}
+
+echo ">>> Installing poetry" && {
+	curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 }

@@ -25,10 +25,11 @@ export PATH=$BREW_PATH/bin:$PATH
 export HOMEBREW_CACHE=$BREW_PATH/cache
 
 ## pyenv
-export PATH=$PYENV_PATH/bin:$PATH
-if command -v pyenv 1>/dev/null 2>&1; then
-        eval "$(pyenv init -)"
-fi
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+## poetry
+export PATH=$HOME/.poetry/bin:$PATH
 
 ## nvm
 source $NVM_PATH/nvm.sh
@@ -45,3 +46,5 @@ fi
 
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+export PATH="$HOME/.poetry/bin:$PATH"
