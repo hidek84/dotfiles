@@ -37,7 +37,7 @@ source $NVM_PATH/nvm.sh
 
 # PATH
 export PATH="$PATH:$HOME/.local/bin"
-
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
